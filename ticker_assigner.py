@@ -2,7 +2,9 @@ import random
 import quandl
 from functools import lru_cache
 
-quandl.ApiConfig.api_key = "bzZhNYkqkttmx4ECHegx"
+load dotenv()
+
+quandl.ApiConfig.api_key = os.environ("TICKER_TOKEN")
 
 @lru_cache()
 def list_maker():
